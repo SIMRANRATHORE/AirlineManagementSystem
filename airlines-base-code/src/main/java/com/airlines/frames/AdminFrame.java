@@ -1,5 +1,6 @@
 package com.airlines.frames;
 
+import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
@@ -9,54 +10,26 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenuItem;
-import javax.swing.JTextField;
 
-public class BookTickets {
+public class AdminFrame {
 	
-	public static void bookTickets(){
-		final JFrame book=new JFrame("Booking");
-		ImageIcon icon=new ImageIcon("src/main/java/image/img2.jpg");
+	public static void adminFrame(){
+		final JFrame log=new JFrame("Admin");
+		ImageIcon icon=new ImageIcon("src/main/java/image/admin.png");
 		JMenuItem iconMenuItem = new JMenuItem(icon);
-		iconMenuItem.setLocation(10, 10);
-		iconMenuItem.setSize(100,100);
+		iconMenuItem.setLocation(150, 10);
+		iconMenuItem.setSize(275,100);
 		iconMenuItem.setCursor(new Cursor(Cursor.HAND_CURSOR));
 		iconMenuItem.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				WelcomeFrame.welcomeFrame();
-				book.setVisible(false);
+				AdminFrame.adminFrame();
+				log.setVisible(false);
 			}
 		});
-		book.add(iconMenuItem);
+		log.add(iconMenuItem);
 		
-		JLabel head=new JLabel("Booking Tickets");
-		head.setLocation(195, 10);
-		head.setSize(200, 100);
-		head.setFont(new Font("Courier", Font.BOLD, 20));
-		book.add(head);
-		
-		JLabel flight=new JLabel("Flight Id");
-		flight.setLocation(210, 100);
-		flight.setSize(150, 50);
-		flight.setFont(new Font("Courier", Font.ITALIC, 15));
-		book.add(flight);
-		
-		JTextField flightText=new JTextField();
-		flightText.setLocation(360, 118);
-		flightText.setSize(60, 20);
-		book.add(flightText);
-		
-		JLabel num=new JLabel("No. of Passenger");
-		num.setLocation(210, 150);
-		num.setSize(200,50);
-		num.setFont(new Font("Courier", Font.ITALIC, 15));
-		book.add(num);
-		
-		JTextField numText=new JTextField();
-		numText.setLocation(360,168);
-		numText.setSize(60,20);
-		book.add(numText);
-		JLabel menu1=new JLabel("Book Tickets");
+		JLabel menu1=new JLabel("Add Admin");
 		menu1.setLocation(10,150);
 		menu1.setSize(150,100);
 		menu1.setFont(new Font("Courier", Font.BOLD, 20));
@@ -64,13 +37,13 @@ public class BookTickets {
 		menu1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				BookTickets.bookTickets();
-				book.setVisible(false);
+				AdminRegistration.adminRegistration();
+				log.setVisible(false);
 			}
 		});
-		book.add(menu1);
+		log.add(menu1);
 		
-		JLabel menu2=new JLabel("Veiw Flights");
+		JLabel menu2=new JLabel("Add Flights");
 		menu2.setLocation(10, 200);
 		menu2.setSize(150,100);
 		menu2.setFont(new Font("Courier", Font.BOLD,20));
@@ -78,11 +51,11 @@ public class BookTickets {
 		menu2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				RegistrationFrame.registrationFrame();
-				book.setVisible(false);
+				FlightsFrame.flightsFrame();
+				log.setVisible(false);
 			}
 		});
-		book.add(menu2);
+		log.add(menu2);
 		
 		JLabel menu3=new JLabel("Booking Status");
 		menu3.setLocation(10, 250);
@@ -93,13 +66,13 @@ public class BookTickets {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				RegistrationFrame.registrationFrame();
-				book.setVisible(false);
+				log.setVisible(false);
 			}
 		});
-		book.add(menu3);
+		log.add(menu3);
 		
 		JLabel logout=new JLabel("Logout");
-		logout.setLocation(420, 10);
+		logout.setLocation(540, 0);
 		logout.setSize(80,30);
 		logout.setFont(new Font("Courier", Font.ITALIC,15));
 		logout.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -107,16 +80,17 @@ public class BookTickets {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				Frames.show();
-				book.setVisible(false);
+				log.setVisible(false);
 			}
 		});
-		book.add(logout);
-				
-		book.setLayout(null);
-		book.setSize(500,600);
-		book.setLocationRelativeTo(null);
-		book.setResizable(false);
-		book.setVisible(true);
+		log.add(logout);
+		
+		log.getContentPane().setBackground(new Color(237, 248, 251));
+		log.setLayout(null);
+		log.setSize(600,600);
+		log.setLocationRelativeTo(null);
+		log.setResizable(false);
+		log.setVisible(true);
 	} 
-
+	
 }

@@ -2,8 +2,10 @@ com\airlines\frames\WelcomeFrame.class
 com\airlines\frames\RegistrationFrame.class
 com\airlines\frames\BookTickets$1.class
 com\airlines\frames\WelcomeFrame$4.class
+com\airlines\entities\User.class
 com\airlines\frames\Frames$3.class
 com\airlines\frames\BookTickets$5.class
+com\airlines\model\DBConnect.class
 com\airlines\frames\WelcomeFrame$3.class
 com\airlines\frames\BookTickets$4.class
 com\airlines\frames\Frames$2.class
@@ -15,6 +17,8 @@ com\airlines\main\Main.class
 com\airlines\frames\RegistrationFrame$1.class
 com\airlines\frames\BookTickets.class
 com\airlines\frames\WelcomeFrame$1.class
+com\airlines\dao\api\UserDAO.class
+com\airlines\dao\impl\UserDAOImpl.class
 com\airlines\frames\BookTickets$2.class
 com\airlines\frames\RegistrationFrame$2.class
 com\airlines\frames\WelcomeFrame$5.class

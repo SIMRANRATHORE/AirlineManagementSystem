@@ -78,8 +78,7 @@ public class WelcomeFrame {
 		logout.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				Frames obj=new Frames();
-				obj.show();
+				Frames.show();
 				log.setVisible(false);
 			}
 		});
